@@ -1,0 +1,33 @@
+server:
+  port: 8081
+security:
+  basic:
+    enabled:false
+
+management:
+  security:
+    enabled:false
+
+spring:
+  application:
+    name: poll-service
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: poll
+    password: poll
+    driverClassName: org.h2.Driver
+  jpa:
+    database: H2
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  flyway:
+    enabled: false
+  allowed:
+    resources: /h2-console/**

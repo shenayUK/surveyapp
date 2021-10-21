@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "127b33e9-04f2-4293-ad0a-61cfe824c153",
+		"name": "Pollservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "localhost:8081/api/login/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"usernameOrEmail\": \"000373\", \"password\": \"Sifre123\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/login/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/enduser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6IjAwMDM3MyIsIm5hbWUiOiJtZWhtZXQiLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiIsImlhdCI6MTYyNTk5NDM1OSwiZXhwIjoxNjI2MDEyMzU5fQ.HNlNJp9KDEwMweyOw8WU6BN2aDsUwoHf84YDggvb0dAyiF3kf27Zmwg8_F6Sxcd42xUVpq4CsiNRnN2r2Iz9QA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/enduser",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"enduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/propose",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6IjAwMDM3MyIsIm5hbWUiOiJtZWhtZXQiLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiIsImlhdCI6MTYyNTk5NDM1OSwiZXhwIjoxNjI2MDEyMzU5fQ.HNlNJp9KDEwMweyOw8WU6BN2aDsUwoHf84YDggvb0dAyiF3kf27Zmwg8_F6Sxcd42xUVpq4CsiNRnN2r2Iz9QA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"question\": \"vacation was good for me?\",\n  \"choices\": [\n    {\n      \"option\": \"Yes\"\n    },\n    {\n      \"option\": \"partially\"\n    },\n    {\n      \"option\": \"No\"\n    },\n    {\n      \"option\": \"No idea\"\n    }\n  ],\n  \"pollDuration\": {\n    \"days\": 5,\n    \"hours\": 8\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/propose",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"propose"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/1/4/voted",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6IjAwMDM3MyIsIm5hbWUiOiJtZWhtZXQiLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiIsImlhdCI6MTYyNTk0NjIyNSwiZXhwIjoxNjI1OTY0MjI1fQ.PHootbVhE_QNuACHhEIQLYHUv8e5voaMbxgbaU2job-LvMDBvFEcy9LeYNYkB3Tnwcu4Cd4_VbgnNVC2tON8lw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/api/polls/1/4/voted",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"1",
+								"4",
+								"voted"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "localhost:8081/api/login/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"usernameOrEmail\": \"000374\", \"password\": \"Sifre123\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/login/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6IjAwMDM3NCIsIm5hbWUiOiJiYW51IiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjI1OTQ0MjUxLCJleHAiOjE2MjU5NjIyNTF9.tWJLJuoGpRFfW0yB8Dz3JegG2dmBgshpH5WpZhjCFuccyfwhp4jlL4s0-lfh0uCajks411DvNrhXH8-fSRHUag",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/proposal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6IjAwMDM3NCIsIm5hbWUiOiJiYW51IiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjI1OTQ0MjUxLCJleHAiOjE2MjU5NjIyNTF9.tWJLJuoGpRFfW0yB8Dz3JegG2dmBgshpH5WpZhjCFuccyfwhp4jlL4s0-lfh0uCajks411DvNrhXH8-fSRHUag",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/proposal",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"proposal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6IjAwMDM3NCIsIm5hbWUiOiJiYW51IiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjI1OTk0MjgzLCJleHAiOjE2MjYwMTIyODN9.rQJs_Ot5clVOrZz9kwWwetcuqiyKnJ43yCYY7pZ6KxBxuhyH1UIfCSjY88FT94UfyG1ZkLGyCxnckzkUISmHYA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"question\": \"How is your weather today?\",\n  \"choices\": [\n    {\n      \"option\": \"Hot\"\n    },\n    {\n      \"option\": \"Warm\"\n    },\n    {\n      \"option\": \"Cool\"\n    },\n    {\n      \"option\": \"Cold\"\n    }\n  ],\n  \"pollDuration\": {\n    \"days\": 6,\n    \"hours\": 4\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6IjAwMDM3NCIsIm5hbWUiOiJiYW51IiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjI1OTk0MjgzLCJleHAiOjE2MjYwMTIyODN9.rQJs_Ot5clVOrZz9kwWwetcuqiyKnJ43yCYY7pZ6KxBxuhyH1UIfCSjY88FT94UfyG1ZkLGyCxnckzkUISmHYA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/2/confirm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6IjAwMDM3NCIsIm5hbWUiOiJiYW51IiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjI1OTk0MjgzLCJleHAiOjE2MjYwMTIyODN9.rQJs_Ot5clVOrZz9kwWwetcuqiyKnJ43yCYY7pZ6KxBxuhyH1UIfCSjY88FT94UfyG1ZkLGyCxnckzkUISmHYA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/2/confirm",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"2",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/2/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6IjAwMDM3NCIsIm5hbWUiOiJiYW51IiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjI1OTk0MjgzLCJleHAiOjE2MjYwMTIyODN9.rQJs_Ot5clVOrZz9kwWwetcuqiyKnJ43yCYY7pZ6KxBxuhyH1UIfCSjY88FT94UfyG1ZkLGyCxnckzkUISmHYA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/2/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"2",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8081/api/polls/1/doPassive",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6IjAwMDM3NCIsIm5hbWUiOiJiYW51IiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNjI1OTQ0MjUxLCJleHAiOjE2MjU5NjIyNTF9.tWJLJuoGpRFfW0yB8Dz3JegG2dmBgshpH5WpZhjCFuccyfwhp4jlL4s0-lfh0uCajks411DvNrhXH8-fSRHUag",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8081/api/polls/1/doPassive",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"polls",
+								"1",
+								"doPassive"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "isTokenValid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6IjAwMDM3MyIsIm5hbWUiOiJtZWhtZXQiLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiIsImlhdCI6MTYyNTk0NDQzNywiZXhwIjoxNjI1OTYyNDM3fQ.JZVMq05wk0546W2dO3UhtxI054zd6JZiyvMHkbN9XglZ9Z5utcPsc-eYIaLrK4m5bMJ_sQsN16AZdnabBcc_1g",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/api/token/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
